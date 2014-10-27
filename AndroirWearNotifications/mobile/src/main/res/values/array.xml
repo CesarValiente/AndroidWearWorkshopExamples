@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notifications">
+        <item>@string/basic</item>
+        <item>@string/voice</item>
+        <item>@string/pages</item>
+        <item>@string/stacking</item>
+    </string-array>
+</resources>
