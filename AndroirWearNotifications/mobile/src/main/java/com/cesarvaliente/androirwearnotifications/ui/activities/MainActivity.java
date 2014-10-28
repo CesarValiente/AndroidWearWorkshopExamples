@@ -2,7 +2,6 @@ package com.cesarvaliente.androirwearnotifications.ui.activities;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -10,21 +9,21 @@ import android.view.View;
 
 import com.cesarvaliente.androirwearnotifications.R;
 import com.cesarvaliente.androirwearnotifications.ui.fragments.NavigationDrawerFragment;
+import com.cesarvaliente.androirwearnotifications.ui.fragments.notifications.BaseNotificationFragment;
 import com.cesarvaliente.androirwearnotifications.ui.fragments.notifications.BasicNotificationFragment;
 import com.cesarvaliente.androirwearnotifications.ui.fragments.notifications.PagesNotificationFragment;
 import com.cesarvaliente.androirwearnotifications.ui.fragments.notifications.StackingNotificationFragment;
 import com.cesarvaliente.androirwearnotifications.ui.fragments.notifications.VoiceNotificationFragment;
 
 
-public class MainActivity extends Activity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class MainActivity extends Activity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
-    private Fragment mFragment;
+    private BaseNotificationFragment mFragment;
 
     private ActionBar mActionBar;
     private String mOldTitle;
@@ -90,7 +89,7 @@ public class MainActivity extends Activity
     }
 
     public void onNotifyMeClick(View view) {
-        ((BasicNotificationFragment) mFragment).showNotification();
+        mFragment.showNotification();
     }
 
 }
