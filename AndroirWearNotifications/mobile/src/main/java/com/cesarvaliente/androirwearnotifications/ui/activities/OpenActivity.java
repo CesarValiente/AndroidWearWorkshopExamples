@@ -14,7 +14,7 @@ import com.cesarvaliente.androirwearnotifications.R;
  */
 public class OpenActivity extends Activity {
 
-    public static final String OPEN_INTENT_EXTRA = "open_extra";
+    public static final String OPEN_TEXT_EXTRA = "open_text_extra";
 
     @InjectView(R.id.open_text)
     TextView mTextView;
@@ -33,8 +33,8 @@ public class OpenActivity extends Activity {
         super.onResume();
 
         Bundle bundle = getIntent().getExtras();
-        if (bundle != null && bundle.containsKey(OPEN_INTENT_EXTRA)) {
-            String extra = bundle.getString(OPEN_INTENT_EXTRA);
+        if (bundle != null && bundle.containsKey(OPEN_TEXT_EXTRA)) {
+            String extra = bundle.getString(OPEN_TEXT_EXTRA);
             mTextView.setText(extra);
         }
     }
