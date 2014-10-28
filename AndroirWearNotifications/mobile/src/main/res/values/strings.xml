@@ -10,5 +10,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+    <string name="title">title</string>
+    <string name="content">content</string>
+    <string name="show_notification">Notify me!</string>
 
 </resources>
