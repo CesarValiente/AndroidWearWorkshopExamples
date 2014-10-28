@@ -4,6 +4,10 @@ android {
     compileSdkVersion 21
     buildToolsVersion "21.0.2"
 
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
     defaultConfig {
         applicationId "com.cesarvaliente.androirwearnotifications"
         minSdkVersion 18
@@ -11,6 +15,11 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
     buildTypes {
         release {
             runProguard false
@@ -24,4 +33,5 @@ dependencies {
     wearApp project(':wear')
     compile 'com.google.android.gms:play-services:6.1.11'
     compile 'com.android.support:support-v4:21.0.0'
+    compile 'com.jakewharton:butterknife:5.1.2'
 }
