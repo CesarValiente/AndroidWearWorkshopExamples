@@ -1,6 +1,5 @@
 package com.cesarvaliente.androirwearnotifications.ui.fragments.notifications;
 
-import android.app.Fragment;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +20,7 @@ import com.cesarvaliente.androirwearnotifications.ui.activities.OpenActivity;
 /**
  * Created by cesar on 25/10/14.
  */
-public class BasicNotificationFragment extends Fragment {
+public class BasicNotificationFragment extends BaseNotificationFragment {
 
     private final int BASIC_NOTIFICATION_ID = 1;
 
@@ -54,6 +53,7 @@ public class BasicNotificationFragment extends Fragment {
         return rootView;
     }
 
+    @Override
     public void showNotification() {
 
         String title = checkTitle();

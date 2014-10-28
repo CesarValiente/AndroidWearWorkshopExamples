@@ -1,6 +1,5 @@
 package com.cesarvaliente.androirwearnotifications.ui.fragments.notifications;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +11,7 @@ import com.cesarvaliente.androirwearnotifications.ui.activities.MainActivity;
 /**
  * Created by cesar on 25/10/14.
  */
-public class PagesNotificationFragment extends Fragment {
+public class PagesNotificationFragment extends BaseNotificationFragment {
 
     /**
      * Returns a new instance of this fragment for the given section
@@ -34,5 +33,10 @@ public class PagesNotificationFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         return rootView;
+    }
+
+    @Override
+    public void showNotification() {
+
     }
 }
