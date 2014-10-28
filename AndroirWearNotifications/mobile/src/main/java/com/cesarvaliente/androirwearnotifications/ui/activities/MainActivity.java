@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.view.View;
 
 import com.cesarvaliente.androirwearnotifications.R;
 import com.cesarvaliente.androirwearnotifications.ui.fragments.NavigationDrawerFragment;
@@ -22,6 +23,8 @@ public class MainActivity extends Activity
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
+
+    private Fragment mFragment;
 
     private ActionBar mActionBar;
     private String mOldTitle;
@@ -45,26 +48,25 @@ public class MainActivity extends Activity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
 
-        Fragment fragment = null;
         switch (position) {
         case 0:
-            fragment = BasicNotificationFragment.newInstance();
+            mFragment = BasicNotificationFragment.newInstance();
             break;
         case 1:
-            fragment = VoiceNotificationFragment.newInstance();
+            mFragment = VoiceNotificationFragment.newInstance();
             break;
         case 2:
-            fragment = PagesNotificationFragment.newInstance();
+            mFragment = PagesNotificationFragment.newInstance();
             break;
         case 3:
-            fragment = StackingNotificationFragment.newInstance();
+            mFragment = StackingNotificationFragment.newInstance();
             break;
         }
 
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                       .replace(R.id.container, fragment)
+                       .replace(R.id.container, mFragment)
                        .commit();
     }
 
@@ -85,6 +87,10 @@ public class MainActivity extends Activity
         if (mOldTitle != null) {
             setActionBarTitle(mOldTitle);
         }
+    }
+
+    public void onNotifyMeClick(View view) {
+        ((BasicNotificationFragment) mFragment).showNotification();
     }
 
 }
