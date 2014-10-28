@@ -13,5 +13,10 @@
     <string name="title">title</string>
     <string name="content">content</string>
     <string name="show_notification">Notify me!</string>
+    <string name="basic_action">Map action</string>
+    <string name="map">Map</string>
+    <string name="basic_just_wereable">Just for wear</string>
+    <string name="action_hide_icon">hide icon</string>
+    <string name="basic_change_background">change background</string>
 
 </resources>
