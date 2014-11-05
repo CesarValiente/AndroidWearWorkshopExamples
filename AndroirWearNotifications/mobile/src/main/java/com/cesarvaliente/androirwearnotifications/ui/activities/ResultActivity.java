@@ -11,13 +11,12 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import com.cesarvaliente.androirwearnotifications.R;
 import com.cesarvaliente.androirwearnotifications.ui.fragments.notifications.VoiceNotificationFragment;
+import com.cesarvaliente.androirwearnotifications.ui.utils.Constants;
 
 /**
  * Created by cesar on 27/10/14.
  */
 public class ResultActivity extends Activity {
-
-    public static final String OPEN_TEXT_EXTRA = "open_text_extra";
 
     @InjectView(R.id.open_text)
     TextView mTextView;
@@ -40,8 +39,8 @@ public class ResultActivity extends Activity {
             mTextView.setText(voiceMessage);
         } else {
             Bundle bundle = getIntent().getExtras();
-            if (bundle != null && bundle.containsKey(OPEN_TEXT_EXTRA)) {
-                String extra = bundle.getString(OPEN_TEXT_EXTRA);
+            if (bundle != null && bundle.containsKey(Constants.RESULT_TEXT_EXTRA)) {
+                String extra = bundle.getString(Constants.RESULT_TEXT_EXTRA);
                 mTextView.setText(extra);
             }
         }
@@ -64,8 +63,8 @@ public class ResultActivity extends Activity {
     private String getVoiceMessage(Intent intent) {
 
         Bundle remoteInput = RemoteInput.getResultsFromIntent(intent);
-        if (remoteInput != null && remoteInput.containsKey(VoiceNotificationFragment.EXTRA_VOICE_REPLY)) {
-            return remoteInput.getCharSequence(VoiceNotificationFragment.EXTRA_VOICE_REPLY).toString();
+        if (remoteInput != null && remoteInput.containsKey(Constants.EXTRA_VOICE_REPLY)) {
+            return remoteInput.getCharSequence(Constants.EXTRA_VOICE_REPLY).toString();
         }
         return null;
     }
