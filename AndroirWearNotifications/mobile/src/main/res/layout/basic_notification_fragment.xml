@@ -30,17 +30,19 @@
 
             <CheckBox
                     android:id="@+id/basic_map"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/basic_action"/>
+                    android:text="@string/basic_action"
+                    android:layout_weight="1"/>
 
             <CheckBox
                     android:id="@+id/basic_just_wearable"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/basic_just_wereable"/>
+                    android:text="@string/basic_just_wereable"
+                    android:layout_weight="1"/>
 
         </LinearLayout>
 
@@ -51,17 +53,19 @@
 
             <CheckBox
                     android:id="@+id/basic_hide_icon"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/action_hide_icon"/>
+                    android:text="@string/action_hide_icon"
+                    android:layout_weight="1"/>
 
             <CheckBox
                     android:id="@+id/basic_change_background"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/basic_change_background"/>
+                    android:text="@string/basic_change_background"
+                    android:layout_weight="1"/>
 
         </LinearLayout>
 
