@@ -15,15 +15,12 @@ import butterknife.ButterKnife;
 import com.cesarvaliente.androirwearnotifications.R;
 import com.cesarvaliente.androirwearnotifications.ui.activities.MainActivity;
 import com.cesarvaliente.androirwearnotifications.ui.activities.ResultActivity;
+import com.cesarvaliente.androirwearnotifications.ui.utils.Constants;
 
 /**
  * Created by cesar on 25/10/14.
  */
 public class VoiceNotificationFragment extends BaseNotificationFragment {
-
-    private final int VOICE_NOTIFICATION_ID = 2;
-
-    public static final String EXTRA_VOICE_REPLY = "extra_voice_reply";
 
     /**
      * Returns a new instance of this fragment for the given section
@@ -57,7 +54,7 @@ public class VoiceNotificationFragment extends BaseNotificationFragment {
         //Voice reply choices
         String[] replyChoices = getResources().getStringArray(R.array.voice_reply_choices);
 
-        RemoteInput remoteInput = new RemoteInput.Builder(EXTRA_VOICE_REPLY)
+        RemoteInput remoteInput = new RemoteInput.Builder(Constants.EXTRA_VOICE_REPLY)
                 .setLabel(replyLabel)
                 .setChoices(replyChoices)
                 .build();
@@ -83,6 +80,6 @@ public class VoiceNotificationFragment extends BaseNotificationFragment {
 
         //Sends the notification
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(getActivity());
-        notificationManagerCompat.notify(VOICE_NOTIFICATION_ID, notification);
+        notificationManagerCompat.notify(Constants.VOICE_NOTIFICATION_ID, notification);
     }
 }
