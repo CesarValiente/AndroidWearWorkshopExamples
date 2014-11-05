@@ -18,5 +18,11 @@
     <string name="basic_just_wereable">Just for wear</string>
     <string name="action_hide_icon">hide icon</string>
     <string name="basic_change_background">change background</string>
+    <string name="voice_reply">Reply</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="maybe">Maybe</string>
+    <string name="voice_message">Message</string>
+    <string name="voice_new_message">Hey you have a new message! :-)</string>
 
 </resources>
