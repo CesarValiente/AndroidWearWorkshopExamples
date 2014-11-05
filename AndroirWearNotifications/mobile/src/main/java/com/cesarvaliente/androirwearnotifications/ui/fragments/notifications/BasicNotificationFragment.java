@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import com.cesarvaliente.androirwearnotifications.R;
 import com.cesarvaliente.androirwearnotifications.ui.activities.MainActivity;
-import com.cesarvaliente.androirwearnotifications.ui.activities.OpenActivity;
+import com.cesarvaliente.androirwearnotifications.ui.activities.ResultActivity;
 import com.cesarvaliente.androirwearnotifications.ui.utils.WearableUtils;
 
 /**
@@ -78,8 +78,8 @@ public class BasicNotificationFragment extends BaseNotificationFragment {
         String title = checkTitle();
         String content = checkContent();
 
-        Intent viewIntent = new Intent(getActivity(), OpenActivity.class);
-        viewIntent.putExtra(OpenActivity.OPEN_TEXT_EXTRA, title + " " + content);
+        Intent viewIntent = new Intent(getActivity(), ResultActivity.class);
+        viewIntent.putExtra(ResultActivity.OPEN_TEXT_EXTRA, title + " " + content);
         viewIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, viewIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);

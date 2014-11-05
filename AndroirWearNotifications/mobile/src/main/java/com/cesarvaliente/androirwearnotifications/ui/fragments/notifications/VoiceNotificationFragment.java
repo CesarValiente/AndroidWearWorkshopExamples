@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import butterknife.ButterKnife;
 import com.cesarvaliente.androirwearnotifications.R;
 import com.cesarvaliente.androirwearnotifications.ui.activities.MainActivity;
-import com.cesarvaliente.androirwearnotifications.ui.activities.OpenActivity;
+import com.cesarvaliente.androirwearnotifications.ui.activities.ResultActivity;
 
 /**
  * Created by cesar on 25/10/14.
@@ -63,7 +63,7 @@ public class VoiceNotificationFragment extends BaseNotificationFragment {
                 .build();
 
         //Create a intent for the reply action
-        Intent replyIntent = new Intent(getActivity(), OpenActivity.class);
+        Intent replyIntent = new Intent(getActivity(), ResultActivity.class);
         PendingIntent replyPendingIntent = PendingIntent.getActivity(getActivity(), 0, replyIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
