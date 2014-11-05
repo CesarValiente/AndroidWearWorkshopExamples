@@ -6,4 +6,11 @@
         <item>@string/pages</item>
         <item>@string/stacking</item>
     </string-array>
+
+    <string-array name="voice_reply_choices">
+        <item>@string/yes</item>
+        <item>@string/no</item>
+        <item>@string/maybe</item>
+    </string-array>
+
 </resources>
