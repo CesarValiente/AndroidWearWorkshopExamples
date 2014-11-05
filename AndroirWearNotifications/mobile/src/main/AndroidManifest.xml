@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ui.activities.OpenActivity"/>
+                android:name=".ui.activities.ResultActivity"/>
 
     </application>
 

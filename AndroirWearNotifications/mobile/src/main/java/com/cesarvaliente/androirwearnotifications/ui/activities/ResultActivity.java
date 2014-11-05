@@ -15,7 +15,7 @@ import com.cesarvaliente.androirwearnotifications.ui.fragments.notifications.Voi
 /**
  * Created by cesar on 27/10/14.
  */
-public class OpenActivity extends Activity {
+public class ResultActivity extends Activity {
 
     public static final String OPEN_TEXT_EXTRA = "open_text_extra";
 
