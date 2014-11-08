@@ -95,9 +95,11 @@ public class PagesNotificationFragment extends BaseNotificationFragment {
      * pages notification.
      * @return
      */
-    private NotificationCompat.Builder getNotificationBuilder() {
+    private NotificationCompat.Builder getNotificationBuilder(String textResult) {
 
         Intent replyIntent = new Intent(getActivity(), ResultActivity.class);
+        replyIntent.putExtra(Constants.RESULT_TEXT_EXTRA, textResult);
+        replyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, replyIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
