@@ -76,9 +76,17 @@ public class PagesNotificationFragment extends BaseNotificationFragment {
      */
     private Notification getNotification() {
 
+        List<Notification> pages = getNotificationPages();
+        int numPages = pages.size();
+
+        String textContent = getResources().getQuantityString(R.plurals.pages_content, numPages,
+                numPages);
+        NotificationCompat.Builder builder = getNotificationBuilder(textContent);
+        builder.setContentText(textContent);
+
         return new NotificationCompat.WearableExtender()
-                .addPages(getNotificationPages())
-                .extend(getNotificationBuilder())
+                .addPages(pages)
+                .extend(builder)
                 .build();
     }
 
@@ -97,9 +105,9 @@ public class PagesNotificationFragment extends BaseNotificationFragment {
         return new NotificationCompat.Builder(getActivity())
                 .setSmallIcon(android.R.drawable.ic_input_get)
                 .setContentTitle(getString(R.string.pages_title))
-                .setContentText(getString(R.string.pages_content))
                 .setContentIntent(pendingIntent);
     }
+
 
     /**
      * Gets a {@link android.support.v4.app.NotificationCompat.BigTextStyle} instance that we use to give shape
