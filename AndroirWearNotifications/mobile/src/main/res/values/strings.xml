@@ -35,7 +35,10 @@
     <string name="pages_title_4">Page 4</string>
     <string name="pages_title_5">Page 5</string>
 
-    <string name="pages_content">This is a notification with several pages</string>
+    <plurals name="pages_content">
+        <item quantity="one">This is a notification with one page</item>
+        <item quantity="other">This is a notification with %d pages</item>
+    </plurals>
     <string name="pages_content_1">Con diez cañones por banda, viento en popa a toda vela,
         no cruza el mar si no vuela un velero bergantin. Y ve allí en la proa asomado aquel temido pirata
         en todo mar conocido, del uno al otro confín. Y ve el capitán pirata Ásia aun lado,
