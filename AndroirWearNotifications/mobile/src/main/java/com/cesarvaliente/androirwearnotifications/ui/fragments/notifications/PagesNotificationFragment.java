@@ -90,6 +90,15 @@ public class PagesNotificationFragment extends BaseNotificationFragment {
                 .build();
     }
 
+    private PendingIntent getPendingIntent(String textResult) {
+        Intent replyIntent = new Intent(getActivity(), ResultActivity.class);
+        replyIntent.putExtra(Constants.RESULT_TEXT_EXTRA, textResult);
+        replyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        return PendingIntent.getActivity(getActivity(), 0, replyIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
     /**
      * Creates the {@link android.support.v4.app.NotificationCompat.Builder} we are going to use to build our
      * pages notification.
@@ -97,17 +106,10 @@ public class PagesNotificationFragment extends BaseNotificationFragment {
      */
     private NotificationCompat.Builder getNotificationBuilder(String textResult) {
 
-        Intent replyIntent = new Intent(getActivity(), ResultActivity.class);
-        replyIntent.putExtra(Constants.RESULT_TEXT_EXTRA, textResult);
-        replyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, replyIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT);
-
         return new NotificationCompat.Builder(getActivity())
                 .setSmallIcon(android.R.drawable.ic_input_get)
                 .setContentTitle(getString(R.string.pages_title))
-                .setContentIntent(pendingIntent);
+                .setContentIntent(getPendingIntent(textResult));
     }
 
 
