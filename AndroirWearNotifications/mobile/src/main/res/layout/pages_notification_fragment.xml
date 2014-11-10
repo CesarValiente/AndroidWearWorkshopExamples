@@ -40,12 +40,6 @@
             android:text="@string/pages_title_5"/>
 
     <Button
-            android:id="@+id/pages_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_centerInParent="true"
-            android:onClick="onNotifyMeClick"
-            android:text="@string/show_notification"/>
+            style="@style/notifyButton"/>
 
 </LinearLayout>
