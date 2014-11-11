@@ -19,15 +19,14 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import com.cesarvaliente.androirwearnotifications.R;
 import com.cesarvaliente.androirwearnotifications.ui.activities.MainActivity;
-import com.cesarvaliente.androirwearnotifications.ui.activities.OpenActivity;
+import com.cesarvaliente.androirwearnotifications.ui.activities.ResultActivity;
+import com.cesarvaliente.androirwearnotifications.ui.utils.Constants;
 import com.cesarvaliente.androirwearnotifications.ui.utils.WearableUtils;
 
 /**
  * Created by cesar on 25/10/14.
  */
 public class BasicNotificationFragment extends BaseNotificationFragment {
-
-    private final int BASIC_NOTIFICATION_ID = 1;
 
     private final int MAX_NOTIFICATION_CONTENT_LENGTH = 15;
 
@@ -78,9 +77,10 @@ public class BasicNotificationFragment extends BaseNotificationFragment {
         String title = checkTitle();
         String content = checkContent();
 
-        Intent viewIntent = new Intent(getActivity(), OpenActivity.class);
-        viewIntent.putExtra(OpenActivity.OPEN_TEXT_EXTRA, title + " " + content);
+        Intent viewIntent = new Intent(getActivity(), ResultActivity.class);
+        viewIntent.putExtra(Constants.RESULT_TEXT_EXTRA, title + " " + content);
         viewIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        
         PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, viewIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -133,7 +133,7 @@ public class BasicNotificationFragment extends BaseNotificationFragment {
         //Always use NotficiationManagerCompat since some functions don't work in the NotificationManager api
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getActivity());
 
-        notificationManager.notify(BASIC_NOTIFICATION_ID, notificationBuilder.build());
+        notificationManager.notify(Constants.BASIC_NOTIFICATION_ID, notificationBuilder.build());
     }
 
     private String checkTitle() {

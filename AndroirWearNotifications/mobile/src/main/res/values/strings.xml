@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">AndroirWearNotifications</string>
+    <string name="app_name">AndroidWearNotifications</string>
     <string name="basic">Basic</string>
     <string name="voice">Receiving voice</string>
     <string name="pages">Pages</string>
     <string name="stacking">Stacking</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
-    <string name="action_settings">Settings</string>
+
+    <!-- Basic notification -->
     <string name="title">title</string>
     <string name="content">content</string>
     <string name="show_notification">Notify me!</string>
@@ -18,5 +18,57 @@
     <string name="basic_just_wereable">Just for wear</string>
     <string name="action_hide_icon">hide icon</string>
     <string name="basic_change_background">change background</string>
+
+    <!-- Voice notification -->
+    <string name="voice_reply">Reply</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="maybe">Maybe</string>
+    <string name="voice_message">Message</string>
+    <string name="voice_new_message">Hey you have a new message! :-)</string>
+
+    <!-- Pages notification -->
+    <string name="pages_title">Page notification</string>
+    <string name="pages_title_1">Page 1</string>
+    <string name="pages_title_2">Page 2</string>
+    <string name="pages_title_3">Page 3</string>
+    <string name="pages_title_4">Page 4</string>
+    <string name="pages_title_5">Page 5</string>
+
+    <plurals name="pages_content">
+        <item quantity="one">This is a notification with one page</item>
+        <item quantity="other">This is a notification with %d pages</item>
+    </plurals>
+    <string name="pages_content_1">Con diez cañones por banda, viento en popa a toda vela,
+        no cruza el mar si no vuela un velero bergantin. Y ve allí en la proa asomado aquel temido pirata
+        en todo mar conocido, del uno al otro confín. Y ve el capitán pirata Ásia aun lado,
+        al otro Europa, y allí a su lado Estambul.</string>
+    <string name="pages_content_2">Esta mañana, al levantarme, por ver la chao ver la chao ver la chao chao
+        chao, esta mañana, al levantarme, he divisado al hombre sol.</string>
+    <string name="pages_content_3">Oh gerrillero, quiero ir contigo, por ver la chao ver la chao ver la
+        chao chao chao, o gerrillero, quiero ir contigo, por que me siento ya morir.</string>
+    <string name="pages_content_4">Y si yo muero, en el combate, por ver la chao, ver la chao,
+        ver la chao chao chao, y si yo muero en el combate coje tus manos mi fusil.</string>
+    <string name="pages_content_5">Y esta es la historia, de un gerrillero, por ver la chao ver la chao
+        ver la chao chao chao, y esta es la historia de un gerrillero, muerto por la libertad.</string>
+
+    <!-- Stack notification -->
+    <string name="stack_title">Stack notification</string>
+    <string name="stack_1">1st Email</string>
+    <string name="stack_2">2nd Email</string>
+    <string name="stack_3">3rd Email</string>
+    <string name="stack_4">4th Email</string>
+    <string name="stack_5">5th Email</string>
+    <string name="stack_1_value">John Doe   Urgent!!</string>
+    <string name="stack_2_value">El Fary   Ole esos chavales!</string>
+    <string name="stack_3_value">James Bond   Kill Goldfinger</string>
+    <string name="stack_4_value">Darth Vader   I\'m your father</string>
+    <string name="stack_5_value">Diego Maradona   Football</string>
+    <string name="stack_summary">Use a summary</string>
+    <plurals name="stack_num_emails">
+        <item quantity="one">1 new message</item>
+        <item quantity="other">%d new messages</item>
+    </plurals>
+    <string name="stack_my_email">cesar.valiente@gmail.com</string>
 
 </resources>
