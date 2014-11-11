@@ -41,6 +41,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
+        setActionBar();
     }
 
     @Override
@@ -77,9 +78,6 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
     }
 
     public void setActionBarTitle(String title) {
-        if (mActionBar == null) {
-            setActionBar();
-        }
         mActionBar.setTitle(title);
         mOldTitle = title;
     }
@@ -90,10 +88,6 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
         }
     }
 
-    /**
-     * This method manages all click events on this example app when we show the notification
-     * @param view
-     */
     public void onNotifyMeClick(View view) {
         mFragment.showNotification();
     }
