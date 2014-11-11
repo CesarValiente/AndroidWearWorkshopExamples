@@ -30,19 +30,17 @@
 
             <CheckBox
                     android:id="@+id/basic_map"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/basic_action"
-                    android:layout_weight="1"/>
+                    android:text="@string/basic_action"/>
 
             <CheckBox
                     android:id="@+id/basic_just_wearable"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/basic_just_wereable"
-                    android:layout_weight="1"/>
+                    android:text="@string/basic_just_wereable"/>
 
         </LinearLayout>
 
@@ -53,24 +51,26 @@
 
             <CheckBox
                     android:id="@+id/basic_hide_icon"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/action_hide_icon"
-                    android:layout_weight="1"/>
+                    android:text="@string/action_hide_icon"/>
 
             <CheckBox
                     android:id="@+id/basic_change_background"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/basic_change_background"
-                    android:layout_weight="1"/>
+                    android:text="@string/basic_change_background"/>
 
         </LinearLayout>
 
         <Button
-                style="@style/notifyButton"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/show_notification"
+                android:onClick="onNotifyMeClick"/>
 
     </LinearLayout>
 
